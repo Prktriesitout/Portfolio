@@ -22,72 +22,255 @@
 <div class="content-section">
   <h2 class="content-title">Featured Projects</h2>
   <p class="content-lead">
-    Selected software engineering and cloud infrastructure projects by Pratyush Kumar.
+    Selected AI, machine learning, and LLM engineering projects by Pratyush Kumar.
   </p>
 
   <div class="projects-grid">
     <!-- Project 1 -->
     <article class="project-card">
       <div class="project-card-header">
-        <h3 class="project-card-title">Scalable &amp; Highly Available AWS Web Application Infrastructure</h3>
+        <h3 class="project-card-title">Concordia: Multi-Model Chest X-Ray Consensus Framework</h3>
       </div>
       <p class="project-desc">
-        Architected multi-AZ AWS infrastructure featuring EC2 instances across Availability Zones, Application Load Balancer with target groups, Auto Scaling groups based on CPU utilization, and secure RDS PostgreSQL in private subnets with DynamoDB NoSQL operations via Python/Boto3.
+        Built a three-agent consensus system for chest X-ray research reports. Google MedGemma 1.5 4B IT (deployed locally) and OpenAI GPT-6 Astra each produce an independent interpretation. A third reviewer agent then cross-verifies both outputs, flags discrepancies, and generates one evidence-based consolidated report.
       </p>
       <div class="project-tags">
-        <span class="project-tag">AWS EC2</span>
-        <span class="project-tag">VPC</span>
-        <span class="project-tag">ALB</span>
-        <span class="project-tag">Auto Scaling</span>
-        <span class="project-tag">RDS PostgreSQL</span>
-        <span class="project-tag">DynamoDB</span>
-        <span class="project-tag">CloudWatch</span>
-        <span class="project-tag">Python/Boto3</span>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">PyTorch</span>
+        <span class="project-tag">Hugging Face</span>
+        <span class="project-tag">MedGemma</span>
+        <span class="project-tag">OpenAI API</span>
+        <span class="project-tag">Gradio</span>
+        <span class="project-tag">Google Colab</span>
       </div>
       <div class="project-links">
-        <a href="https://github.com/Prktriesitout" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+        <a href="https://github.com/Prktriesitout/Concordia-CXR-repo" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
       </div>
     </article>
 
     <!-- Project 2 -->
     <article class="project-card">
       <div class="project-card-header">
-        <h3 class="project-card-title">CI/CD Pipeline with Jenkins, Docker &amp; Kubernetes</h3>
+        <h3 class="project-card-title">HR Assistant: LLM-Powered Agent with Backend Tools</h3>
       </div>
       <p class="project-desc">
-        Constructed an end-to-end automated deployment pipeline using Jenkins and GitHub Actions. Containerized multi-service applications using optimized multi-stage Dockerfiles and deployed scalable workloads across Kubernetes Deployments, Services, and ConfigMaps with automated rollback steps.
+        Developed an LLM-powered HR agent that goes beyond a basic chatbot by invoking structured backend operations: validating requests, enforcing role-based permissions for employees, managers, and HR, and working against a relational database with audit logging. It covers leave management, reimbursements, tickets, onboarding, and anonymous pulse surveys. A dedicated escalation mechanism intercepts sensitive messages before they reach the language model.
       </p>
       <div class="project-tags">
-        <span class="project-tag">Jenkins</span>
-        <span class="project-tag">GitHub Actions</span>
-        <span class="project-tag">Docker</span>
-        <span class="project-tag">Kubernetes</span>
-        <span class="project-tag">Bash</span>
-        <span class="project-tag">CI/CD</span>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">LLM Agents</span>
+        <span class="project-tag">Tool Calling</span>
+        <span class="project-tag">Relational Database</span>
+        <span class="project-tag">Role-Based Access</span>
+        <span class="project-tag">Audit Logging</span>
       </div>
       <div class="project-links">
-        <a href="https://github.com/Prktriesitout" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+        <a href="https://github.com/Prktriesitout/HRAssistant" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
       </div>
     </article>
 
     <!-- Project 3 -->
     <article class="project-card">
       <div class="project-card-header">
-        <h3 class="project-card-title">Infrastructure Automation &amp; Monitoring with Terraform, Ansible &amp; Prometheus</h3>
+        <h3 class="project-card-title">RAG Architectures: Normal, Metadata &amp; Hybrid Retrieval</h3>
       </div>
       <p class="project-desc">
-        Provisioned modular cloud infrastructure as code via Terraform for EC2, VPC, and network security groups. Automated configuration management across environments with Ansible playbooks, and configured real-time monitoring and alerting using Prometheus and Grafana dashboards.
+        Implemented and compared three Retrieval-Augmented Generation approaches to study how retrieval strategy affects the relevance and accuracy of generated answers: semantic search over embeddings, metadata-filtered retrieval, and hybrid retrieval that combines semantic and keyword search.
       </p>
       <div class="project-tags">
-        <span class="project-tag">Terraform</span>
-        <span class="project-tag">Ansible</span>
-        <span class="project-tag">Prometheus</span>
-        <span class="project-tag">Grafana</span>
-        <span class="project-tag">AWS</span>
-        <span class="project-tag">Linux</span>
+        <span class="project-tag">RAG</span>
+        <span class="project-tag">Semantic Search</span>
+        <span class="project-tag">Metadata Filtering</span>
+        <span class="project-tag">Hybrid Search</span>
+        <span class="project-tag">Embeddings</span>
+        <span class="project-tag">Python</span>
       </div>
       <div class="project-links">
-        <a href="https://github.com/Prktriesitout" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+        <a href="https://github.com/Prktriesitout/RAG" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+      </div>
+    </article>
+
+    <!-- Project 4 -->
+    <article class="project-card">
+      <div class="project-card-header">
+        <h3 class="project-card-title">LangGraph: Agent Workflows &amp; Stateful Graphs</h3>
+      </div>
+      <p class="project-desc">
+        Built a structured collection of LangGraph projects covering StateGraph design with typed state, conditional edges, ReAct and supervisor agents, subgraphs, and tool routing. Also implemented short-term and long-term memory with MemorySaver and SqliteSaver checkpoints, plus human-in-the-loop interrupts, approval flows, and resume with Command. Practical builds include customer support, HR routing, persistent sales chat, and travel supervision.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">LangGraph</span>
+        <span class="project-tag">StateGraph</span>
+        <span class="project-tag">ReAct Agents</span>
+        <span class="project-tag">Supervisor Agents</span>
+        <span class="project-tag">MemorySaver</span>
+        <span class="project-tag">SqliteSaver</span>
+        <span class="project-tag">Human-in-the-Loop</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Prktriesitout/LangGraph" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+      </div>
+    </article>
+
+    <!-- Project 5 -->
+    <article class="project-card">
+      <div class="project-card-header">
+        <h3 class="project-card-title">LangChain Projects: LLM Application Toolkit</h3>
+      </div>
+      <p class="project-desc">
+        Developed LLM applications with LangChain using PromptTemplate and FewShotPromptTemplate prompting, PDF ingestion with recursive chunking, Hugging Face embeddings with a Chroma vector store, in-memory chat history, and structured output parsing. Delivered through Jupyter, Colab, and Gradio interfaces.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">LangChain</span>
+        <span class="project-tag">Hugging Face</span>
+        <span class="project-tag">Cohere</span>
+        <span class="project-tag">Chroma</span>
+        <span class="project-tag">PyPDFLoader</span>
+        <span class="project-tag">Gradio</span>
+        <span class="project-tag">Google Colab</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Prktriesitout/Langchain_Projects" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+      </div>
+    </article>
+
+    <!-- Project 6 -->
+    <article class="project-card">
+      <div class="project-card-header">
+        <h3 class="project-card-title">AI Research Paper Summarizer</h3>
+      </div>
+      <p class="project-desc">
+        Created a research paper summarizer that extracts structured summaries (Problem Statement, Proposed Method, Key Findings) from PDFs using a fully local, open-source LLM (Qwen2.5-0.5B-Instruct) with no proprietary APIs. The modular pipeline handles PDF chunking, targeted chunk selection, prompt-based extraction, and JSON parsing and merging into a clean structured output.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Qwen2.5</span>
+        <span class="project-tag">Transformers</span>
+        <span class="project-tag">Prompt Engineering</span>
+        <span class="project-tag">PDF Processing</span>
+        <span class="project-tag">JSON</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Prktriesitout/AI-research-Paper" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+      </div>
+    </article>
+
+    <!-- Project 7 -->
+    <article class="project-card">
+      <div class="project-card-header">
+        <h3 class="project-card-title">Sleep Debt Analysis &amp; ML Predictor</h3>
+      </div>
+      <p class="project-desc">
+        Built an end-to-end analysis and predictive modeling workspace exploring how demographics and evening habits (phone usage, caffeine, blue-light filters) affect sleep debt severity and next-day fatigue. Key findings: each extra hour of sleep lowers fatigue by about 1.6 points, and users with optimized evening habits averaged a 1.64 fatigue score versus 4.95 for those with none. Night owls (95.8%) and healthcare and shift workers (18.3% severe) are the most vulnerable groups.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Pandas</span>
+        <span class="project-tag">Scikit-learn</span>
+        <span class="project-tag">Data Analysis</span>
+        <span class="project-tag">Machine Learning</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Prktriesitout/bedtime_dataset" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+      </div>
+    </article>
+
+    <!-- Project 8 -->
+    <article class="project-card">
+      <div class="project-card-header">
+        <h3 class="project-card-title">Anemia Classification &amp; Diagnostics System</h3>
+      </div>
+      <p class="project-desc">
+        Developed an end-to-end ML diagnostics dashboard that classifies patients as Anemic, Non-Anemic, or Compensated Microcytosis from Complete Blood Count parameters. Feature optimization reduced 23 original features to just four (HGB, MCH, RDW_CV, Gender) with no loss in accuracy. A Decision Tree reached 100% cross-validated accuracy, and a Gradio web interface supports real-time clinical predictions.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Scikit-learn</span>
+        <span class="project-tag">Decision Tree</span>
+        <span class="project-tag">Pandas</span>
+        <span class="project-tag">Gradio</span>
+        <span class="project-tag">Feature Selection</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Prktriesitout/Medical_dataset" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+      </div>
+    </article>
+
+    <!-- Project 9 -->
+    <article class="project-card">
+      <div class="project-card-header">
+        <h3 class="project-card-title">Linear Regression: California Housing Price Prediction</h3>
+      </div>
+      <p class="project-desc">
+        Trained a linear regression model on scikit-learn's California Housing dataset to predict median house values from income, house age, rooms, bedrooms, population, household size, and location. The script handles the train/test split, model fitting, sample predictions, and a comparison plot of predicted versus actual values.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Scikit-learn</span>
+        <span class="project-tag">LinearRegression</span>
+        <span class="project-tag">Matplotlib</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Prktriesitout/Linear_Regression-" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+      </div>
+    </article>
+
+    <!-- Project 10 -->
+    <article class="project-card">
+      <div class="project-card-header">
+        <h3 class="project-card-title">KNN Classifier: Iris Species Prediction</h3>
+      </div>
+      <p class="project-desc">
+        Built a K-Nearest Neighbors classifier (k=3) to predict Iris species from flower measurements. The project covers train/test splitting, model evaluation on unseen data, accuracy reporting, and visualizations that highlight correct and incorrect predictions.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Scikit-learn</span>
+        <span class="project-tag">NumPy</span>
+        <span class="project-tag">Matplotlib</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Prktriesitout/KNN" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+      </div>
+    </article>
+
+    <!-- Project 11 -->
+    <article class="project-card">
+      <div class="project-card-header">
+        <h3 class="project-card-title">Auto MPG Data Visualization</h3>
+      </div>
+      <p class="project-desc">
+        Explored, cleaned, and visualized the Auto MPG dataset in a Google Colab notebook, with mean imputation for missing horsepower values and derived features like city mileage. Visualizations include multi-axes line plots, box plots, bar charts of cars produced per model year, horsepower histograms, and pie charts of vehicle origin.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Pandas</span>
+        <span class="project-tag">NumPy</span>
+        <span class="project-tag">Matplotlib</span>
+        <span class="project-tag">Google Colab</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Prktriesitout/matplotlib_assignments" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
+      </div>
+    </article>
+
+    <!-- Project 12 -->
+    <article class="project-card">
+      <div class="project-card-header">
+        <h3 class="project-card-title">NumPy Assignments: Numerical Computing Fundamentals</h3>
+      </div>
+      <p class="project-desc">
+        Worked through a progressive set of NumPy assignments, from array creation to advanced numerical operations. Topics include indexing, slicing, reshaping, broadcasting, vectorization, matrix operations, and linear algebra, with a focus on efficient computation without heavy reliance on Python loops.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">NumPy</span>
+        <span class="project-tag">Linear Algebra</span>
+        <span class="project-tag">Vectorization</span>
+        <span class="project-tag">Broadcasting</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Prktriesitout/numpy_assignments" target="_blank" rel="noopener noreferrer" class="xp-button">View on GitHub</a>
       </div>
     </article>
   </div>
