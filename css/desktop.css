@@ -1,0 +1,28 @@
+/* Windows XP Desktop Layer */
+
+#desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: var(--xp-taskbar-height);
+  background-color: var(--xp-fallback-bg);
+  background-image: url("../assets/wallpaper/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#window-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#window-container > * {
+  pointer-events: auto;
+}

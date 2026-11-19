@@ -1,0 +1,309 @@
+/* Windows XP File Explorer & Viewers Styles */
+
+.explorer-window-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--xp-cream);
+}
+
+/* Toolbar */
+.explorer-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 6px;
+  background-color: var(--xp-cream);
+  border-bottom: 1px solid #d4d0c8;
+  flex-shrink: 0;
+}
+
+.explorer-toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 3px 6px;
+  font-family: var(--xp-font-family);
+  font-size: 11px;
+  color: #000000;
+  cursor: pointer;
+  outline: none;
+}
+
+.explorer-toolbar-btn:not(:disabled):hover {
+  background: linear-gradient(to bottom, #ffffff, #ece9d8);
+  border-color: #707070;
+  box-shadow: inset 1px 1px 0 #ffffff;
+}
+
+.explorer-toolbar-btn:not(:disabled):active {
+  background: #dbd7c5;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.explorer-toolbar-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+
+.explorer-toolbar-btn img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.toolbar-separator {
+  width: 1px;
+  height: 18px;
+  background-color: #d4d0c8;
+  margin: 0 4px;
+}
+
+/* Address Bar */
+.explorer-address-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 6px;
+  background-color: var(--xp-cream);
+  border-bottom: 1px solid #999999;
+  flex-shrink: 0;
+}
+
+.address-label {
+  font-size: 11px;
+  color: #444444;
+}
+
+.address-input-box {
+  flex: 1;
+  height: 22px;
+  background-color: #ffffff;
+  border: 1px solid #7f9db9;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  gap: 4px;
+  font-size: 11px;
+  color: #000000;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.address-input-box img {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.address-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: text;
+}
+
+/* Main Explorer Pane */
+.explorer-pane {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #7f9db9;
+  border-top-color: #555555;
+  border-left-color: #555555;
+  margin: 2px 3px;
+  overflow-y: auto;
+  padding: 12px;
+  user-select: none;
+}
+
+.explorer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 12px 8px;
+  align-items: start;
+}
+
+.explorer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  outline: none;
+  width: 100%;
+}
+
+.explorer-item:hover {
+  background-color: #eef5ff;
+  border-color: #b5d5ff;
+}
+
+.explorer-item.selected,
+.explorer-item:focus-visible {
+  background-color: #dbeaff;
+  border-color: #7da2ce;
+}
+
+.explorer-item img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  pointer-events: none;
+}
+
+.explorer-item-name {
+  font-family: var(--xp-font-family);
+  font-size: 11px;
+  color: #000000;
+  margin-top: 4px;
+  word-break: break-word;
+  max-width: 100%;
+  padding: 1px 3px;
+  border-radius: 2px;
+  line-height: 1.2;
+}
+
+.explorer-item.selected .explorer-item-name,
+.explorer-item:focus-visible .explorer-item-name {
+  background-color: var(--xp-selection-bg);
+  color: var(--xp-selection-text);
+}
+
+/* CSV Viewer */
+.csv-viewer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.csv-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background-color: var(--xp-cream);
+  border-bottom: 1px solid #d4d0c8;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.csv-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+}
+
+.csv-badge {
+  background-color: #e4eefb;
+  border: 1px solid #a3c4f3;
+  color: #083b8a;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.csv-table-wrapper {
+  flex: 1;
+  overflow: auto;
+  background-color: #ffffff;
+  border: 1px solid #7f9db9;
+  border-top-color: #555555;
+  border-left-color: #555555;
+  margin: 2px 3px;
+}
+
+.csv-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--xp-font-family);
+  font-size: 11px;
+  text-align: left;
+}
+
+.csv-table th {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to bottom, #f7f6f0 0%, #ebe7d6 100%);
+  border: 1px solid #c2c0b0;
+  border-top: none;
+  padding: 5px 8px;
+  font-weight: bold;
+  color: #000000;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.csv-table td {
+  border: 1px solid #e0dfd5;
+  padding: 4px 8px;
+  white-space: nowrap;
+  color: #111111;
+  user-select: text;
+}
+
+.csv-table tr:nth-child(even) td {
+  background-color: #fbfbf8;
+}
+
+.csv-table tr:hover td {
+  background-color: #edf4ff;
+}
+
+.csv-row-note {
+  padding: 6px 10px;
+  font-size: 11px;
+  color: #666666;
+  font-style: italic;
+  background-color: #f7f6f0;
+  border-top: 1px solid #d4d0c8;
+}
+
+/* PDF Viewer */
+.pdf-viewer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pdf-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background-color: var(--xp-cream);
+  border-bottom: 1px solid #d4d0c8;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.pdf-frame-wrapper {
+  flex: 1;
+  border: 1px solid #7f9db9;
+  border-top-color: #555555;
+  border-left-color: #555555;
+  margin: 2px 3px;
+  background-color: #525659;
+  position: relative;
+}
+
+.pdf-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}

@@ -1,0 +1,420 @@
+/* Windows XP Window Manager Styles */
+
+.xp-window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--xp-cream);
+  border: 3px solid var(--xp-blue-border);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.45);
+  min-width: 300px;
+  min-height: 200px;
+  overflow: hidden;
+  user-select: none;
+}
+
+.xp-window.inactive {
+  border-color: var(--xp-blue-inactive-border);
+}
+
+.xp-window.minimized {
+  display: none !important;
+}
+
+.xp-window.maximized {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Title Bar */
+.window-titlebar {
+  height: 28px;
+  background: var(--xp-titlebar-active);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px 0 6px;
+  color: #ffffff;
+  cursor: default;
+  touch-action: none;
+  border-radius: 5px 5px 0 0;
+  flex-shrink: 0;
+}
+
+.xp-window.inactive .window-titlebar {
+  background: var(--xp-titlebar-inactive);
+}
+
+.xp-window.maximized .window-titlebar {
+  border-radius: 0;
+}
+
+.titlebar-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.titlebar-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.titlebar-title {
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.xp-window.inactive .titlebar-title {
+  color: #e4eaf5;
+  text-shadow: none;
+}
+
+/* Window Control Buttons */
+.window-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.win-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  outline: none;
+}
+
+.win-btn img {
+  width: 21px;
+  height: 21px;
+  display: block;
+  pointer-events: none;
+}
+
+.win-btn:hover img {
+  filter: brightness(1.12);
+}
+
+.win-btn:active img {
+  filter: brightness(0.88);
+}
+
+.win-btn:focus-visible {
+  outline: 1px dotted #ffffff;
+}
+
+/* Window Body */
+.window-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--xp-cream);
+  padding: 3px;
+}
+
+.window-content {
+  flex: 1;
+  background-color: var(--xp-window-content-bg);
+  border: 1px solid #7f9db9;
+  border-top-color: #555555;
+  border-left-color: #555555;
+  overflow: auto;
+  padding: 16px;
+  user-select: text;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+/* Status Bar */
+.window-statusbar {
+  height: 20px;
+  background-color: var(--xp-cream);
+  border-top: 1px solid #d4d0c8;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  font-size: 11px;
+  color: #444444;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.statusbar-panel {
+  border: 1px inset #d4d0c8;
+  padding: 1px 4px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Content Typography & Shared Widgets */
+.content-section {
+  margin-bottom: 20px;
+}
+
+.content-section:last-child {
+  margin-bottom: 0;
+}
+
+.content-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0a246a;
+  border-bottom: 2px solid #0055ea;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.content-subtitle {
+  font-size: 13px;
+  font-weight: bold;
+  color: #245edb;
+  margin: 12px 0 6px 0;
+}
+
+.content-lead {
+  font-size: 13px;
+  color: #222222;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* About Me specific */
+.bio-layout {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.bio-text {
+  flex: 1;
+}
+
+.quick-facts {
+  list-style: none;
+  background-color: #f7f6f0;
+  border: 1px solid #d4d0c8;
+  padding: 10px 12px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quick-facts li {
+  display: flex;
+  gap: 8px;
+}
+
+.fact-label {
+  font-weight: bold;
+  color: #0a246a;
+  min-width: 90px;
+}
+
+/* Credibility items */
+.cred-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cred-item {
+  border: 1px solid #d4d0c8;
+  background-color: #faf9f5;
+  padding: 10px 12px;
+  border-radius: 3px;
+  border-left: 4px solid #0055ea;
+}
+
+.cred-item-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.cred-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.cred-year {
+  font-size: 11px;
+  font-weight: bold;
+  color: #0055ea;
+  background: #e6efff;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.cred-desc {
+  font-size: 12px;
+  color: #444444;
+  line-height: 1.4;
+}
+
+/* Projects cards */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-card {
+  border: 1px solid #b5b1a0;
+  background-color: #faf9f5;
+  padding: 12px 14px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.project-card-header {
+  margin-bottom: 6px;
+}
+
+.project-card-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0a246a;
+}
+
+.project-desc {
+  font-size: 12px;
+  color: #333333;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.project-tag {
+  background-color: #e4eefb;
+  border: 1px solid #a3c4f3;
+  color: #083b8a;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.project-links {
+  display: flex;
+  gap: 8px;
+}
+
+/* Contact items */
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: #faf9f5;
+  border: 1px solid #d4d0c8;
+  border-radius: 3px;
+}
+
+.contact-label {
+  font-weight: bold;
+  min-width: 80px;
+  color: #0a246a;
+}
+
+.contact-link {
+  color: #0055ea;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.copy-feedback {
+  font-size: 11px;
+  color: #008800;
+  font-weight: bold;
+  margin-left: 8px;
+  display: none;
+}
+
+.copy-feedback.show {
+  display: inline;
+}
+
+/* Loading & Error States */
+.window-state-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #555555;
+}
+
+.window-error-box {
+  border: 1px solid #d9534f;
+  background-color: #fdf7f7;
+  color: #a94442;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.window-error-box h3 {
+  margin-bottom: 6px;
+  color: #c9302c;
+}
+
+/* Responsive Window Rules */
+@media (max-width: 700px) {
+  .xp-window {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .window-titlebar {
+    border-radius: 0 !important;
+  }
+}

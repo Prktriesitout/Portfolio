@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratyush Kumar - Windows XP Portfolio</title>
+  <meta name="description" content="Personal portfolio of Pratyush Kumar, styled as a classic Windows XP desktop with interactive windows and file explorer.">
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+
+  <!-- Windows XP Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/taskbar.css">
+  <link rel="stylesheet" href="css/start-menu.css">
+  <link rel="stylesheet" href="css/window.css">
+  <link rel="stylesheet" href="css/explorer.css">
+</head>
+<body>
+  <noscript>
+    <div style="padding: 24px; font-family: Tahoma, sans-serif; background: #ece9d8; color: #000; height: 100vh;">
+      <h2>JavaScript Required</h2>
+      <p>This Windows XP interactive portfolio requires JavaScript to render desktop windows, navigation, and file viewers.</p>
+      <p>Please enable JavaScript in your browser settings to continue.</p>
+    </div>
+  </noscript>
+
+  <!-- Desktop Surface -->
+  <div id="desktop">
+    <div id="window-container"></div>
+  </div>
+
+  <!-- Start Menu -->
+  <nav id="start-menu" aria-label="Start Menu" role="menu">
+    <div class="start-header">
+      <div class="start-avatar">
+        <img src="assets/icons/about-me.png" width="32" height="32" alt="User avatar">
+      </div>
+      <div class="start-username">Pratyush Kumar</div>
+    </div>
+    <ul class="start-items">
+      <li>
+        <button class="start-menu-item" data-window="about-me" role="menuitem" aria-label="Open About Me">
+          <img src="assets/icons/about-me.png" width="32" height="32" alt="">
+          <span class="start-item-text">
+            <span class="start-item-title">About Me</span>
+            <span class="start-item-subtitle">Bio, background & quick facts</span>
+          </span>
+        </button>
+      </li>
+      <li>
+        <button class="start-menu-item" data-window="credibility" role="menuitem" aria-label="Open Credibility">
+          <img src="assets/icons/credibility.png" width="32" height="32" alt="">
+          <span class="start-item-text">
+            <span class="start-item-title">Credibility</span>
+            <span class="start-item-subtitle">Experience & achievements</span>
+          </span>
+        </button>
+      </li>
+      <li>
+        <button class="start-menu-item" data-window="projects" role="menuitem" aria-label="Open Projects">
+          <img src="assets/icons/projects.png" width="32" height="32" alt="">
+          <span class="start-item-text">
+            <span class="start-item-title">Projects</span>
+            <span class="start-item-subtitle">Featured works & tech stacks</span>
+          </span>
+        </button>
+      </li>
+      <li>
+        <button class="start-menu-item" data-window="contact" role="menuitem" aria-label="Open Contact">
+          <img src="assets/icons/contact.png" width="32" height="32" alt="">
+          <span class="start-item-text">
+            <span class="start-item-title">Contact</span>
+            <span class="start-item-subtitle">Get in touch & socials</span>
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Taskbar -->
+  <footer id="taskbar" role="region" aria-label="Taskbar">
+    <div id="start-button-wrapper">
+      <button id="start-button" aria-haspopup="true" aria-expanded="false" aria-label="Start menu">
+        <img src="assets/icons/start-button.png" width="100" height="30" alt="Start">
+      </button>
+    </div>
+
+    <div id="quick-launch">
+      <div class="taskbar-divider" aria-hidden="true"></div>
+      <button id="quick-launch-explorer" class="quick-launch-btn" title="Launch File Explorer" aria-label="File Explorer">
+        <img src="assets/icons/explorer.png" width="16" height="16" alt="Explorer">
+      </button>
+      <div class="taskbar-divider" aria-hidden="true"></div>
+    </div>
+
+    <div id="taskbar-windows" role="group" aria-label="Running Applications"></div>
+
+    <div id="system-tray" role="region" aria-label="System Tray">
+      <img src="assets/icons/volume.png" width="16" height="16" class="tray-icon" alt="Volume" title="Volume">
+      <img src="assets/icons/network.png" width="16" height="16" class="tray-icon" alt="Network" title="Network Connected">
+      <img src="assets/icons/shield.png" width="16" height="16" class="tray-icon" alt="Security" title="Security Status: OK">
+      <time id="tray-clock" aria-label="Current Time">12:00 PM</time>
+    </div>
+  </footer>
+
+  <!-- Scripts in dependency order (Classic scripts, sharing window.XP) -->
+  <script src="js/clock.js"></script>
+  <script src="js/csv-viewer.js"></script>
+  <script src="js/window-manager.js"></script>
+  <script src="js/start-menu.js"></script>
+  <script src="js/explorer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
