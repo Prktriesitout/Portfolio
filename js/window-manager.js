@@ -22,11 +22,15 @@ window.XP = window.XP || {};
       height: 460
     },
     'credibility': {
-      title: 'Credibility',
-      icon: 'assets/icons/credibility.png',
-      contentUrl: 'content/credibility.html',
-      width: 580,
-      height: 480
+      title: 'My Certifications',
+      icon: 'assets/icons/folder.png',
+      width: 820,
+      height: 540,
+      renderContent: function (containerEl) {
+        if (window.XP.renderCertifications) {
+          window.XP.renderCertifications(containerEl);
+        }
+      }
     },
     'projects': {
       title: 'Projects',

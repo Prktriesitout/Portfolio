@@ -1,0 +1,82 @@
+[
+  {
+    "id": "agentic-ai",
+    "title": "Agentic AI: Foundation and Design Patterns",
+    "issuer": "Infosys",
+    "date": "2026-07",
+    "category": "AI & Architecture",
+    "file": "certifications/agentic ai fondation.pdf",
+    "type": "pdf",
+    "credentialUrl": "https://validate.onwingspan.com"
+  },
+  {
+    "id": "mcp",
+    "title": "Model Context Protocol for Developers and Architects",
+    "issuer": "Infosys",
+    "date": "2026-07",
+    "category": "AI & Architecture",
+    "file": "certifications/MCP.pdf",
+    "type": "pdf",
+    "credentialUrl": "https://validate.onwingspan.com"
+  },
+  {
+    "id": "multimodal-ai",
+    "title": "Multimodal AI",
+    "issuer": "Infosys",
+    "date": "2026-07",
+    "category": "AI & Machine Learning",
+    "file": "certifications/Multimodal AI.pdf",
+    "type": "pdf",
+    "credentialUrl": "https://validate.onwingspan.com"
+  },
+  {
+    "id": "langchain-essentials",
+    "title": "Generative AI Essentials with LangChain",
+    "issuer": "Infosys",
+    "date": "2026-07",
+    "category": "AI & Machine Learning",
+    "file": "certifications/generative ai essentials with lagchain.pdf",
+    "type": "pdf",
+    "credentialUrl": "https://validate.onwingspan.com"
+  },
+  {
+    "id": "agent-observability-langfuse",
+    "title": "Agent Observability with Langfuse",
+    "issuer": "Infosys",
+    "date": "2026-07",
+    "category": "Cloud & DevOps",
+    "file": "certifications/agent observalbiity with langfuse.pdf",
+    "type": "pdf",
+    "credentialUrl": "https://validate.onwingspan.com"
+  },
+  {
+    "id": "ds-certification",
+    "title": "Advanced Certificate Programme in Data Science & AI-ML",
+    "issuer": "upGrad",
+    "date": "2024",
+    "category": "Data/Analytics",
+    "file": "certifications/DS-Certification.pdf",
+    "type": "pdf",
+    "credentialUrl": "https://upgrad.verification.givemycertificate.com/v/f651dba1-a42d-45d4-867c-9bdbd6ca4a4d"
+  },
+  {
+    "id": "python-fastapi",
+    "title": "Python Microservices using FastAPI",
+    "issuer": "Infosys",
+    "date": "2026-07",
+    "category": "Programming",
+    "file": "certifications/python fastapi.pdf",
+    "type": "pdf",
+    "credentialUrl": "https://validate.onwingspan.com"
+  },
+  {
+    "id": "api-microservices",
+    "title": "Overview of API and Microservices",
+    "issuer": "Infosys",
+    "date": "2026-07",
+    "category": "Programming",
+    "file": "certifications/overview of api and microservices.pdf",
+    "type": "pdf",
+    "credentialUrl": "https://validate.onwingspan.com"
+  }
+]
