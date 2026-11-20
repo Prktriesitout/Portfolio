@@ -5,7 +5,7 @@
   ],
   "folders": {
     "resume": [
-      { "name": "pratyush-kumar.pdf", "type": "pdf", "path": "files/resume/pratyush-kumar.pdf" }
+      { "name": "Pratyush_AI.pdf", "type": "pdf", "path": "files/resume/Pratyush_AI.pdf" }
     ],
     "datasets": [
       { "name": "advertising-data.csv", "type": "csv", "path": "files/datasets/advertising-data.csv" },

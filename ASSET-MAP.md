@@ -48,7 +48,7 @@ The following files were present in `assets/icons/` and preserved as-is:
 
 | Original Path | Renamed Target Path | Reason |
 |---|---|---|
-| `files/resume/Pratyush_Kumar.pdf` | `files/resume/pratyush-kumar.pdf` | Lowercase & hyphenated |
+| `files/resume/Pratyush_Kumar.pdf` | `files/resume/Pratyush_AI.pdf` | Replaced with updated AI-focused resume (Nov 2026) |
 | `files/datasets/advertising_data.csv` | `files/datasets/advertising-data.csv` | Hyphenated, no underscore |
 | `files/datasets/bedtime_screentime_sleep_debt.csv` | `files/datasets/bedtime-screentime-sleep-debt.csv` | Hyphenated, no underscore |
 | `files/datasets/TriHemo-MCV (1).csv` | `files/datasets/trihemo-mcv-1.csv` | Lowercase, hyphens, removed spaces & parentheses |
