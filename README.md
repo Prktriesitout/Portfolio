@@ -7,9 +7,9 @@ An interactive personal portfolio website styled to look and feel like classic W
 - **Interactive Taskbar**: Start button, quick-launch File Explorer, active running window tasks, and live updating system tray clock.
 - **Start Menu**: Native XP popup panel featuring shortcuts to About Me, Credibility, Projects, and Contact windows.
 - **Draggable Windows**: Window management with cascading placement, maximize/restore, minimize to taskbar, focus layering, and responsive layout.
-- **File Explorer**: Browse virtual folder trees (`Resume`, `Datasets`) with history navigation (Back, Forward, Up) and address bar.
+- **File Explorer**: Browse the virtual `Datasets` folder tree with history navigation (Back, Forward, Up) and address bar.
 - **Built-in Document Viewers**:
-  - **PDF Viewer**: Embedded resume viewer with download and new-tab fallback links.
+  - **PDF Viewer**: Embedded PDF viewer with download and new-tab fallback links.
   - **CSV Viewer**: High-performance in-browser CSV parser supporting quotes, commas, CRLF/LF line endings, sticky headers, row/column statistics, and full file downloads.
 
 ## Local Development

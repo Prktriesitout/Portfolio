@@ -43,7 +43,6 @@ window.XP = window.XP || {};
 
   function getFolderPathText(folderKey) {
     if (folderKey === 'root') return 'My Portfolio';
-    if (folderKey === 'resume') return 'My Portfolio\\Resume';
     if (folderKey === 'datasets') return 'My Portfolio\\Datasets';
     return `My Portfolio\\${folderKey}`;
   }

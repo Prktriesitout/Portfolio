@@ -1,12 +1,8 @@
 {
   "root": [
-    { "name": "Resume",   "type": "folder", "path": "resume" },
     { "name": "Datasets", "type": "folder", "path": "datasets" }
   ],
   "folders": {
-    "resume": [
-      { "name": "Pratyush_AI.pdf", "type": "pdf", "path": "files/resume/Pratyush_AI.pdf" }
-    ],
     "datasets": [
       { "name": "advertising-data.csv", "type": "csv", "path": "files/datasets/advertising-data.csv" },
       { "name": "bedtime-screentime-sleep-debt.csv", "type": "csv", "path": "files/datasets/bedtime-screentime-sleep-debt.csv" },
