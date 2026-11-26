@@ -1,0 +1,8 @@
+# FastAPI API for Pratyush Kumar's portfolio assistant.
+# The OpenAI key is server-side only. Never place it in the static site.
+
+fastapi==0.165.0
+pydantic==2.14.4
+pydantic-settings==2.16.3
+openai==3.57.0
+uvicorn==0.54.0

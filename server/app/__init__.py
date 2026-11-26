@@ -1,0 +1,1 @@
+"""Portfolio AI assistant backend."""

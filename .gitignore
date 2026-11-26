@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Local test output (may contain prompt/response evidence)
+server/test-results/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db

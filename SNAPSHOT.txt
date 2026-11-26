@@ -1,0 +1,178 @@
+================================================================================
+PROJECT SNAPSHOT & RE-ORIENTATION GUIDE: WINDOWS XP PORTFOLIO & AI ASSISTANT
+================================================================================
+Date: 2026-11-23
+Local Workspace: c:\Users\praty\Downloads\portfolio
+GitHub Repository: https://github.com/Prktriesitout/Portfolio.git
+Target Domain: prktriesitout.dpdns.org (via CNAME file in repo root)
+Live Pages Base: https://prktriesitout.github.io/Portfolio/
+Current Branch: security-testing (in sync with main and origin/main at commit 11c322d)
+
+--------------------------------------------------------------------------------
+1. EXECUTIVE SUMMARY & WHAT HAS BEEN BUILT
+--------------------------------------------------------------------------------
+This project consists of two core components:
+
+A. Windows XP Luna-Style Personal Portfolio (Static Frontend)
+   - Built with pure HTML5, CSS3, and vanilla JavaScript (no npm, no bundlers,
+     no frameworks, zero external dependencies/CDNs).
+   - Engineered specifically for GitHub Pages static hosting under a sub-path or custom domain.
+   - Authentic Windows XP Luna desktop UI with full window management, taskbar,
+     start menu, file explorer, viewers, and a certifications showcase.
+
+B. Portfolio AI Assistant API (FastAPI Backend in `server/`)
+   - Lightweight, production-grade, hardened FastAPI service designed to power an
+     interactive portfolio AI assistant.
+   - Strict security layer: rate limiting, conversation limits, input sanitization,
+     request body size guards, security headers, IP hashing, and prompt injection defense.
+   - Comprehensive test suite in `server/tests/` (40 passing tests).
+
+--------------------------------------------------------------------------------
+2. COMPONENT BREAKDOWN & FILE ARCHITECTURE
+--------------------------------------------------------------------------------
+
+[ FRONTEND ]
+Root Entry Point: index.html
+Global Namespace: window.XP
+
+CSS Modules:
+  - css/base.css           -> Color palette, system font stack (Tahoma), button styles
+  - css/desktop.css        -> Desktop wallpaper (background.jpg) & fallback color (#3a6ea5)
+  - css/taskbar.css        -> Luna taskbar, Start button, Quick Launch, Tray & Clock
+  - css/start-menu.css     -> Classic XP start menu panel (two-tone header + entries)
+  - css/window.css         -> Window frames, title bar, minimize/maximize/close buttons, typography
+  - css/explorer.css       -> File Explorer view, address bar, CSV table viewer
+  - css/certifications.css -> Explorer task pane, thumbnail grid, details view, context menu
+
+JavaScript Core:
+  - js/main.js             -> Bootstrapper, quick-launch wiring, responsive resize handlers
+  - js/window-manager.js   -> Drag/drop, maximize, restore, minimize, z-index focus layering, taskbar sync
+  - js/start-menu.js       -> Start menu toggle, outside-click close, Escape key handler
+  - js/clock.js            -> Live taskbar clock (local time, formatted h:mm AM/PM, tooltip)
+  - js/explorer.js         -> Virtual file explorer navigation backed by data/file-index.json
+  - js/csv-viewer.js       -> Built-in CSV table parser and viewer (RFC 4180 compliant)
+  - js/certifications.js   -> "My Certifications" Explorer showcase:
+                              * Left task pane with collapsible category and task panels
+                              * Dual view mode: XP Thumbnails view & Details table view (sortable)
+                              * Live search filter (title, issuer, category)
+                              * Single-click select, double-click open, context menu, keyboard arrows
+                              * Manifest-driven via certifications/manifest.json
+  - js/picture-viewer.js   -> "Windows Picture and Fax Viewer" replica for image certs (zoom, fit, download)
+
+Content & Data:
+  - content/about-me.html  -> Pratyush Kumar's bio, skills, professional summary
+  - content/projects.html  -> 3 featured cloud/DevOps/AI projects
+  - content/contact.html   -> Contact details, LinkedIn, GitHub, copy-email button
+  - data/file-index.json   -> Virtual Explorer files (CSV datasets: advertising, sleep debt, trihemo)
+  - certifications/        -> 8 PDF certificates + manifest.json metadata:
+                              1. Agentic AI Foundation (Infosys)
+                              2. Model Context Protocol - MCP (Infosys)
+                              3. Multimodal AI (Infosys)
+                              4. Generative AI Essentials with LangChain (Infosys)
+                              5. Agent Observability with Langfuse (Infosys)
+                              6. Data Science & AI-ML (upGrad)
+                              7. Python Microservices using FastAPI (Infosys)
+                              8. Overview of API and Microservices (Infosys)
+  - files/resume/          -> Pratyush_AI.pdf (updated resume)
+  - assets/icons/          -> 20+ authentic XP icons (start button, folder, pdf, csv, tray, etc.)
+  - assets/wallpaper/      -> background.jpg
+
+Deployment / Meta:
+  - CNAME                  -> prktriesitout.dpdns.org
+  - .nojekyll              -> Prevents GitHub Pages Jekyll build
+  - ASSET-MAP.md           -> Asset inventory and reference mapping
+  - README.md              -> Project readme
+
+--------------------------------------------------------------------------------
+[ BACKEND (server/) ]
+Framework: FastAPI (Python 3.14 / venv)
+Status: Local, untracked in git, 40/40 tests passing
+
+Directory Structure:
+  server/
+    app/
+      __init__.py
+      main.py              -> FastAPI application, routes (/api/chat, /api/health), lifecycle
+      config.py            -> App settings, CORS, OpenAI configuration, rate limit params
+      middleware.py        -> Request ID tracking, strict HTTP security headers
+      security.py          -> Client IP extraction, conversation validation, token/char guards
+      rate_limit.py        -> Sliding window in-memory rate limiter
+      openai_service.py    -> LLM chat completion client with timeout handling
+      portfolio_context.py -> System knowledge base & prompt injection mitigation context
+      prompts.py           -> Guarded system prompt instructions
+      schemas.py           -> Pydantic validation models
+    tests/
+      __init__.py
+      conftest.py          -> Fixtures, test client setup, mock services
+      test_api.py          -> Health check, CORS, chat route tests, validation
+      test_security.py     -> Attack vector testing, oversized payload rejection, limits
+      test_rate_limit.py   -> Rate limiter behavior & 429 response tests
+      test_openai_service.py -> Upstream mock tests, timeout & error handling
+    pyproject.toml         -> Project metadata & test configuration
+    requirements.txt       -> Core runtime dependencies (fastapi, uvicorn, pydantic, openai, etc.)
+    requirements-dev.txt   -> Dev dependencies (pytest, pytest-asyncio, httpx, ruff)
+    .env.example           -> Template for OPENAI_API_KEY, ALLOWED_ORIGINS, etc.
+
+--------------------------------------------------------------------------------
+3. CURRENT GIT STATE
+--------------------------------------------------------------------------------
+Latest Commit: 11c322d "feat: remove resume folder from file explorer"
+Commit History:
+  11c322d feat: remove resume folder from file explorer
+  4b7c381 Merge remote-tracking branch 'origin/main'
+  379776d feat: replace resume with updated AI-focused version
+  81f9973 chore: preserve CNAME custom domain from remote (prktriesitout.dpdns.org)
+  5c9a027 chore: preserve CNAME custom domain from remote (prktriesitout.dpdns.org)
+  ef36650 feat: rebuild Credibility window into Windows XP Explorer My Certifications showcase
+  ba03f67 feat: complete Windows XP portfolio implementation with Luna desktop, taskbar, start menu...
+  9269bee Initial commit
+
+Untracked files:
+  - .gitignore (properly configured for Python venv, caches, logs, .env)
+  - server/ (backend codebase described above)
+
+--------------------------------------------------------------------------------
+4. HOW TO RUN & TEST LOCALLY
+--------------------------------------------------------------------------------
+
+A. Running Frontend Locally:
+   Option 1: Python HTTP Server
+     python -m http.server 8000
+     Open browser: http://localhost:8000/
+   (Note: Use a local server; file:// URLs will block fetch() calls)
+
+B. Running Backend API Locally:
+   cd server
+   ..\.venv\Scripts\uvicorn app.main:app --reload --port 8080
+   Health check: http://localhost:8080/api/health
+
+C. Running Backend Test Suite:
+   ..\.venv\Scripts\pytest server\tests
+   (Currently: 40 passed in ~2 seconds)
+
+--------------------------------------------------------------------------------
+5. NEXT STEPS & RESTART CHECKLIST FOR TOMORROW
+--------------------------------------------------------------------------------
+When you resume work tomorrow:
+
+1. Commit Backend & Git Hygiene:
+   - Check if you want to commit `.gitignore` and `server/` to the repo on
+     `security-testing` or merge back to `main`.
+   - Command: `git add .gitignore server/ && git commit -m "feat: add secure FastAPI AI assistant server"`
+
+2. Frontend Chat Integration (The Big Opportunity):
+   - Build a Windows XP-style Chat / Assistant window (e.g. "Windows Messenger",
+     "Rover / Search Companion", or "AI Assistant") into the desktop!
+   - Wire it to talk to the backend `/api/chat` endpoint.
+   - Add a Start menu or desktop/taskbar shortcut for the assistant.
+
+3. Backend Hosting & Deployment:
+   - Choose where to host the backend (e.g., Render, Railway, Fly.io, or VPS)
+     since GitHub Pages only hosts static files.
+   - Configure CORS `ALLOWED_ORIGINS` to allow `https://prktriesitout.dpdns.org`
+     and `https://prktriesitout.github.io`.
+
+4. Minor Verifications:
+   - Verify `DS-Certification.pdf` completion date in `certifications/manifest.json`
+     (currently set to 2024 based on PDF metadata).
+================================================================================
